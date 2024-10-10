@@ -1,0 +1,114 @@
+﻿@page
+@model ExperienceModel
+
+@{
+ViewData["Title"] = "Work Experience";
+}
+
+<div class="container py-4">
+    <h1>@ViewData["Title"]</h1>
+    
+    <article class="postcard green">
+        @* <a class="postcard__img_link" href="#"> *@
+        @*     <img class="postcard__img" src="https://banner2.cleanpng.com/20180609/tv/aa8esimd3.webp" alt="Image Title" /> *@
+        @* </a> *@
+        <div class="postcard__text">
+            <h1 class="postcard__title green">
+                Software Engineer <b> <a href="https://www.onsemi.com/" target="_blank" rel="noopener noreferrer">@@ Onsemi</a></b> <img class="postcard__img" src="assets/company-logos/OnsemiLogo.png" alt="Onsemi Logo" />
+            </h1>
+            <div class="postcard__subtitle">
+                <em>Waterloo, ON</em>
+            </div>
+            <div class="postcard__subtitle small">
+                <time datetime="2024-09">
+                    September 2024 -
+                </time>
+                <time datetime="2024-12">
+                    @* <i class="fas fa-calendar-alt mr-2"></i> *@
+                    December 2024
+                </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+                <ul>
+                    <li>
+                        Developed and implemented new features for the user interfaces of Onsemi chips using the <b>QT framework</b> and <b>C++</b>, enhancing user experience and functionality
+                    </li>
+                    <li>
+                        Upgraded software architecture to use <b>Electron</b> and <b>React</b>, modernizing the GUI and resulting in a <b>15% increase in development efficiency</b>
+                    </li>
+                    <li>
+                        Migrated key chip software from <b>Python 2 to Python 3</b>, improving performance and ensuring compatibility with modern frameworks and libraries.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    
+    <article class="postcard blue">
+        <div class="postcard__text">
+            <h1 class="postcard__title blue">
+                Software Engineer Co-op <b> <a href="https://www.siemens.com/global/en/products/automation/industrial-communication/ruggedcom.html" target="_blank" rel="noopener noreferrer">@@ Siemens</a></b> <img class="postcard__img" src="assets/company-logos/SiemensLogo.png" alt="Siemens Logo" />
+            </h1>
+            <div class="postcard__subtitle">
+                <em>Concord, ON</em>
+            </div>
+            <div class="postcard__subtitle small">
+                <time datetime="2024-01">
+                    January 2024 - 
+                </time>
+                <time datetime="2024-04">
+                    @* <i class="fas fa-calendar-alt mr-2"></i> *@
+                    April 2024
+                </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+                <ul>
+                    <li>
+                        Developed and maintained a <b>C# Windows Presentation Foundation</b> receiving floor display application, facilitating real-time tracking and movement of parts and enhancing operational efficiency. Integrated seamlessly with <b>SQL</b> database for data management and retrieval.
+                    </li>
+                    <li>
+                        Improved existing certification software by adding more efficient search/filter functions, allowing floor managers to search for and grant certifications for over <b>180 operators</b>.
+                    </li>
+                    <li>
+                        Built a <b>Windows Form application</b> to streamline the assembly process of PCBAs, enhancing operator efficiency and accuracy across <b>11 product lines</b>.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    
+    <article class="postcard red">
+        <div class="postcard__text">
+            <h1 class="postcard__title red">
+                Technology Intern <b> <a href="https://www.ibc.ca/" target="_blank" rel="noopener noreferrer">@@ Insurance Bureau of Canada</a></b> <img class="postcard__img" src="assets/company-logos/IBCLogo.png" alt="IBC Logo" />
+            </h1>
+            <div class="postcard__subtitle">
+                <em>Toronto, ON</em>
+            </div>
+            <div class="postcard__subtitle small">
+                <time datetime="2023-05">
+                    May 2023 -
+                </time>
+                <time datetime="2023-08">
+                    @* <i class="fas fa-calendar-alt mr-2"></i> *@
+                    August 2023
+                </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+                <ul>
+                    <li>
+                        Planned and executed <b>software unit testing</b> for multiple projects, ensuring adherence to quality standards.
+                    </li>
+                    <li>
+                        Created automated test scripts for manual test cases using <b>Selenium</b> and <b>Katalon Studio</b>, successfully boosting
+                        efficiency and reducing overall testing times by <b>over 95% (20x faster than manual testing)</b>.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+</div>
+

@@ -1,0 +1,322 @@
+﻿@page
+@model ProjectsModel
+
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<div class="container py-4">
+    <h1>@ViewData["Title"]</h1>
+    <section class="postcard red">
+        <div class="postcard__text">
+            <div class="postcard__buttons">
+                <a href="https://github.com/brasenxu/MotiSpectra" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-github"></i>
+                </a>
+                <a href="https://devpost.com/software/motispectra" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-devpost"></i>
+                </a>
+                <a href="https://www.youtube.com/watch?v=yr4MhT2WnGA" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-youtube"></i>
+                </a>
+            </div>
+            <h1 class="postcard__title red">MotiSpectra </h1>
+            <div class="postcard__subtitle_badges">
+                <a href="https://conuhacks-viii.devpost.com/project-gallery" target="_blank" rel="noopener noreferrer" class="badge text-bg-warning">ConUHacks VIII - 2nd Overall</a>
+            </div>
+
+            <div class="postcard__bar_projects"></div>
+            
+            <div id="carouselMotiSpectra" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselMotiSpectra" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselMotiSpectra" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselMotiSpectra" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/projects/motispectra/MotiSpectra-logos_white.png" alt="MotiSpectra Logo" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/projects/motispectra/motispectra.png" alt="Radar Graph" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/projects/motispectra/averages.png" alt="Moving Averages" class="d-block w-100">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMotiSpectra" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselMotiSpectra" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            
+            @* <img src="assets/projects/motispectra.png" alt="Postcard Image" class="postcard__top_full_img"> *@
+            
+            <div class="postcard__bar_projects"></div>
+            
+            <div class="postcard__preview-txt">
+                <ul>
+                    <li>
+                        Developed a real-time emotion analysis software using <b>Next.js</b> and <b>Python</b> to seamlessly integrate with virtual
+                        call platforms (Zoom, Google Meet, MS Teams).
+                    </li>
+                    <li>
+                        Implemented intuitive user interfaces with dynamic radar graphs and rolling averages for visualizing emotion and
+                        attentiveness data.
+                    </li>
+                    <li>
+                        Built and trained ML models from scratch using the <b>FER-2013</b> dataset for emotion and attentiveness recognition.
+                    </li>
+                    <li>
+                        Fine-tuned the <b>YuNet</b> face detection model, ensuring an accuracy rate of 97%
+                    </li>
+                </ul>
+                @* <div> *@
+                @*     <span class="badge text-bg-secondary">New</span>  *@
+                @*     <span class="badge text-bg-secondary">New</span> *@
+                @*     <span class="badge text-bg-secondary">New</span> *@
+                @* </div> *@
+            </div>
+        </div>
+    </section>
+    <section class="postcard blue">
+        <div class="postcard__text">
+            <div class="postcard__buttons">
+                <a href="https://github.com/brasenxu/narratorRL" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-github"></i>
+                </a>
+                <a href="https://devpost.com/software/narratorrl" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-devpost"></i>
+                </a>
+                <a href="https://www.youtube.com/watch?v=90Nnksmp8TM" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-youtube"></i>
+                </a>
+            </div>
+            <h1 class="postcard__title blue">NarratorRL </h1>
+            <div class="postcard__subtitle_badges">
+                <a href="https://methacks-2023.devpost.com/project-gallery" target="_blank" rel="noopener noreferrer" class="badge text-bg-warning">MetHacks - 2nd Overall</a>
+                <a href="https://methacks-2023.devpost.com/submissions/search?utf8=%E2%9C%93&prize_filter%5Bprizes%5D%5B%5D=66459" target="_blank" rel="noopener noreferrer" class="badge text-bg-warning">MetHacks - CoHere Sponsor Challenge 1st</a>
+            </div>
+            <div class="postcard__bar_projects"></div>
+            <img src="assets/projects/narratorRL/logo.png" alt="narratorRL Logo" class="d-block w-100">
+            <div class="postcard__bar_projects"></div>
+            <div class="postcard__preview-txt">
+                <ul>
+                    <li>
+                        Developed a <b>mobile app</b> to address vision impairment using <b>React Native</b>, <b>Tesseract OCR (optical character recognition)</b>, and <b>Django</b>
+                        that recognizes text in images and narrates it aloud using <b>Expo</b>’s speech synthesis service
+                    </li>
+                    <li>
+                        Verified legibility of text and summarized text into keywords using custom-trained <b>Cohere NLP</b> models,
+                        implementing <b>NLP text pre-processing strategies</b> to increase model effectiveness.
+                    </li>
+                    <li>
+                        Applied the <b>Cohere API</b> to implement advanced features such as text language detection and summarization
+                    </li>
+                </ul>
+                @* <div> *@
+                @*     <span class="badge text-bg-secondary">New</span>  *@
+                @*     <span class="badge text-bg-secondary">New</span> *@
+                @*     <span class="badge text-bg-secondary">New</span> *@
+                @* </div> *@
+            </div>
+        </div>
+    </section>
+    <section class="postcard blue">
+        <div class="postcard__text">
+            <div class="postcard__buttons" style="top: 2%;">
+                <a href="https://github.com/brasenxu/QuizCaster" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-github"></i>
+                </a>
+                <a href="https://devpost.com/software/quizcaster" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-devpost"></i>
+                </a>
+                <a href="https://www.youtube.com/watch?v=vjnKNGjlxCM" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-youtube"></i>
+                </a>
+            </div>
+            <h1 class="postcard__title blue">QuizCaster </h1>
+
+            <div class="postcard__bar_projects"></div>
+
+            <div id="carouselQuizcaster" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselQuizcaster" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselQuizcaster" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselQuizcaster" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/projects/quizcaster/1.png" alt="Quizcaster front page" class="d-block w-75 mx-auto">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/projects/quizcaster/2.png" alt="Sample summary" class="d-block w-75 mx-auto">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/projects/quizcaster/3.png" alt="Sample quiz" class="d-block w-75 mx-auto">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselQuizcaster" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselQuizcaster" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="postcard__bar_projects"></div>
+
+            <div class="postcard__preview-txt">
+                <ul>
+                    <li>
+                        Developed a web application with <b>Python</b> and <b>OpenAI APIs</b> to generate multiple-choice questions from a
+                        variety of content formats such as PDFs, websites, Markdown files, and YouTube videos
+                    </li>
+                    <li>
+                        Integrated <b>text-to-speech</b> and <b>speech-to-text</b> capabilities with <b>Whisper AI</b> and <b>Microsoft Azure</b> to
+                        provide greater accessibility to the visual impaired
+                    </li>
+                    <li>
+                        Trained a <b>Naïve-Bayes machine learning model</b> using <b>7.8 million lines</b> of Wiki sentences to format text.
+                    </li>
+                    <li>
+                        Implemented <b>caching</b> by maintaining generated quiz questions in a <b>MongoDB</b> database, designating each with
+                        a unique UUID to allow for user replayability and sharing.
+                    </li>
+                </ul>
+                @* <div> *@
+                @*     <span class="badge text-bg-secondary">New</span>  *@
+                @*     <span class="badge text-bg-secondary">New</span> *@
+                @*     <span class="badge text-bg-secondary">New</span> *@
+                @* </div> *@
+            </div>
+        </div>
+    </section>
+    <section class="postcard green">
+        <div class="postcard__text">
+            <div class="postcard__buttons">
+                <a href="https://github.com/brasenxu/gpt-george" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-github"></i>
+                </a>
+                <a href="https://devpost.com/software/gpt-george" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-devpost"></i>
+                </a>
+                <a href="https://www.youtube.com/watch?v=Gz9_PRwB_vs" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-youtube"></i>
+                </a>
+            </div>
+            <h1 class="postcard__title green">GPT George - AI Virtual Assistant </h1>
+            @* <div class="postcard__subtitle_badges"> *@
+            @*     <a href="https://methacks-2023.devpost.com/project-gallery" target="_blank" rel="noopener noreferrer" class="badge text-bg-warning">MetHacks - 2nd Overall</a> *@
+            @*     <a href="https://methacks-2023.devpost.com/submissions/search?utf8=%E2%9C%93&prize_filter%5Bprizes%5D%5B%5D=66459" target="_blank" rel="noopener noreferrer" class="badge text-bg-warning">MetHacks - CoHere Sponsor Challenge 1st</a> *@
+            @* </div> *@
+            <div class="postcard__bar"></div>
+            @* <img src="assets/projects/gpt-george/logo.png" alt="narratorRL Logo" class="d-block w-100"> *@
+            @* <div class="postcard__bar_projects"></div> *@
+            <div class="postcard__preview-txt">
+                <ul>
+                    <li>
+                        Developed a <b>personalized AI voice assistant</b> that is powered by <b>OpenAI APIs</b> to provide long-term memory
+                        and context features, setting it apart from commercial voice assistants like Alexa or Siri
+                    </li>
+                    <li>
+                        Implemented voice recognition and transcription using <b>Microsoft Azure</b> and <b>Whisper AI</b>, and added <b>GPT-4</b>
+                        and <b>Hume AI</b>’s emotion detection model to allow the assistant to detect and adapt to the user’s emotions,
+                        providing a more enhanced conversation experience.
+                    </li>
+                    <li>
+                        Integrated support for <b>10+ services features</b> including <b>Wolfram Alpha</b>, <b>Google Maps</b>, <b>News</b>, and <b>Spotify</b>,
+                        allowing users to perform a wide range of tasks effortlessly
+                    </li>
+                </ul>
+                @* <div> *@
+                @*     <span class="badge text-bg-secondary">New</span>  *@
+                @*     <span class="badge text-bg-secondary">New</span> *@
+                @*     <span class="badge text-bg-secondary">New</span> *@
+                @* </div> *@
+            </div>
+        </div>
+    </section>
+    <section class="postcard yellow">
+        <div class="postcard__text">
+            <div class="postcard__buttons">
+                <a href="https://github.com/brasenxu/ReviewRecap" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-github"></i>
+                </a>
+                <a href="https://devpost.com/software/bob-gj5h29" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-devpost"></i>
+                </a>
+                @* <a href="https://www.youtube.com/watch?v=yr4MhT2WnGA" target="_blank" rel="noopener noreferrer"> *@
+                @*     <i class="si si-youtube"></i> *@
+                @* </a> *@
+            </div>
+            <h1 class="postcard__title yellow">Review Recap </h1>
+            <div class="postcard__subtitle_badges">
+                <a href="https://uottahack5.devpost.com/project-gallery" target="_blank" rel="noopener noreferrer" class="badge text-bg-warning">uOttaHack 5 - Noibu Sponsor Challenge 1st</a>
+            </div>
+
+            <div class="postcard__bar"></div>
+
+            @* <img src="assets/projects/motispectra.png" alt="Postcard Image" class="postcard__top_full_img"> *@
+
+            <div class="postcard__preview-txt">
+                <ul>
+                    <li>
+                        Built a <b>Chrome extension</b> that parses and analyzes thousands of Amazon product reviews
+                        and sorts them by rating, allowing users to make purchasing decisions more easily and boosting efficiency
+                    </li>
+                    <li>
+                        Used <b>CoHere’s NLP</b> and <b>Beautiful Soup</b> to scrape and extract keywords from 5000+ reviews in seconds
+                    </li>
+                    <li>
+                        Stored and cached results in a <b>RESTful Django</b> backend
+                    </li>
+                </ul>
+                @* <div> *@
+                @*     <span class="badge text-bg-secondary">New</span>  *@
+                @*     <span class="badge text-bg-secondary">New</span> *@
+                @*     <span class="badge text-bg-secondary">New</span> *@
+                @* </div> *@
+            </div>
+        </div>
+    </section>
+    <section class="postcard red">
+        <div class="postcard__text">
+            <div class="postcard__buttons">
+                <a href="https://github.com/brasenxu/quiztopia" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-github"></i>
+                </a>
+                <a href="https://devpost.com/software/quiztopia" target="_blank" rel="noopener noreferrer">
+                    <i class="si si-devpost"></i>
+                </a>
+            </div>
+            <h1 class="postcard__title red">Quiztopia </h1>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+                <ul>
+                    <li>
+                        Developed a trivia app featuring a question bank of nearly <b>4000 problems</b>, allowing users to log into 
+                        an account to save their elo progress on the global leaderboard
+                    </li>
+                    <li>
+                        Designed an intuitive and engaging user interface using <b>React Native</b>
+                    </li>
+                    <li>
+                        Built the backend using <b>AppWrite</b>
+                    </li>
+                </ul>
+                @* <div> *@
+                @*     <span class="badge text-bg-secondary">New</span>  *@
+                @*     <span class="badge text-bg-secondary">New</span> *@
+                @*     <span class="badge text-bg-secondary">New</span> *@
+                @* </div> *@
+            </div>
+        </div>
+    </section>
+</div>
