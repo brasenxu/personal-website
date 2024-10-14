@@ -10,5 +10,6 @@
 5. run following commands: `dotnet restore` and `dotnet publish -c Release -o out`
 6. run `sudo lsof -i :5000` to see if any processes are still running
 7. if so, run `sudo kill -9 <PID>` to kill them
-8. run `dotnet out/WebsiteV2.dll`
-9. call "ctrl-a d" key sequence to detache from current screen session
+8. cd into `out`
+9. run `dotnet WebsiteV2.dll`
+10. call "ctrl-a d" key sequence to detache from current screen session
