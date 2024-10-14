@@ -220,13 +220,12 @@ a, a.hover {
   }
 
   .postcard__img {
-    max-height: 180px;
+    display: flex;
+    justify-content: flex-end;
+    max-height: 15vh;
     width: 100%;
     object-fit: cover;
-    /*position: relative;*/
-    position: absolute;
-    top:10%;
-    right:5%;
+    position: relative;
   }
 
   .postcard__img_link {
