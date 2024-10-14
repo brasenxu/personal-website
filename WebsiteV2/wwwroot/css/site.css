@@ -106,6 +106,7 @@ p {
   font-size: 3rem;
   color: antiquewhite;
   display: flex;
+  max-width: 100%;
   gap: 25px;
   a {
     color: inherit;
@@ -291,7 +292,17 @@ a, a.hover {
 }
 
 @media (max-width: 600px) {
+  .contact__buttons {
+    font-size: 2.5rem;
+    gap: 15px;
+  }
+  
   .postcard__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .postcard__subtitle_badges {
     flex-direction: column;
     align-items: flex-start;
   }
