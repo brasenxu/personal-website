@@ -25,7 +25,6 @@ body {
   text-rendering: optimizeLegibility;
   background: linear-gradient(-45deg, #000000, #161616, #242424, #333333, #434343);
   animation: gradient 120s ease infinite;
-  height: 100vh;
   background-size: 200% 200%;
 }
 
@@ -83,7 +82,6 @@ nav ul li a:hover {
   padding: 150px 20px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 h1 {
