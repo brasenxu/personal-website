@@ -1,6 +1,6 @@
 # Brasen Xu - Personal Website
 
-A modern, responsive personal website built with Next.js, TypeScript, and Tailwind CSS, featuring smooth animations and an improved design.
+A modern, responsive personal website for Brasen built with Next.js, TypeScript, and Tailwind CSS, featuring smooth animations and an improved design.
 
 ## Features
 
