@@ -25,7 +25,7 @@ export const experiences: Experience[] = [
     achievements: [
       'Designed and integrated internal **REST APIs** and UI workflows in the Splunk Security Platform, streamlining operational tasks and reducing incident investigation time by **up to 30x**.',
       'Enhanced ML model execution service to support parameter overrides, cutting configuration deployment from **4–5 hours to minutes** and unlocking new reprocessing capabilities.',
-      'Awarded **Most Impactful Intern Project** in Security Org for the term\'s top operational efficiency gains.'
+      'Awarded **Most Impactful Intern Project** in Security Org for the term&apos;s top operational efficiency gains.'
     ]
   },
   {

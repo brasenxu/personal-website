@@ -53,7 +53,7 @@ export const projects: Project[] = [
     },
     images: ['/assets/projects/narratorRL/logo.png'],
     description: [
-      'Developed a **mobile app** to address vision impairment using **React Native**, **Tesseract OCR (optical character recognition)**, and **Django** that recognizes text in images and narrates it aloud using **Expo**\'s speech synthesis service',
+      'Developed a **mobile app** to address vision impairment using **React Native**, **Tesseract OCR (optical character recognition)**, and **Django** that recognizes text in images and narrates it aloud using **Expo**&apos;s speech synthesis service',
       'Verified legibility of text and summarized text into keywords using custom-trained **Cohere NLP** models, implementing **NLP text pre-processing strategies** to increase model effectiveness.',
       'Applied the **Cohere API** to implement advanced features such as text language detection and summarization'
     ]
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     images: ['/assets/projects/gpt-george/logo.png'],
     description: [
       'Developed a **personalized AI voice assistant** that is powered by **OpenAI APIs** to provide long-term memory and context features, setting it apart from commercial voice assistants like Alexa or Siri',
-      'Implemented voice recognition and transcription using **Microsoft Azure** and **Whisper AI**, and added **GPT-4** and **Hume AI**\'s emotion detection model to allow the assistant to detect and adapt to the user\'s emotions, providing a more enhanced conversation experience.',
+      'Implemented voice recognition and transcription using **Microsoft Azure** and **Whisper AI**, and added **GPT-4** and **Hume AI**&apos;s emotion detection model to allow the assistant to detect and adapt to the user&apos;s emotions, providing a more enhanced conversation experience.',
       'Integrated support for **10+ services features** including **Wolfram Alpha**, **Google Maps**, **News**, and **Spotify**, allowing users to perform a wide range of tasks effortlessly'
     ]
   },
@@ -111,7 +111,7 @@ export const projects: Project[] = [
     images: [],
     description: [
       'Built a **Chrome extension** that parses and analyzes thousands of Amazon product reviews and sorts them by rating, allowing users to make purchasing decisions more easily and boosting efficiency',
-      'Used **CoHere\'s NLP** and **Beautiful Soup** to scrape and extract keywords from 5000+ reviews in seconds',
+      'Used **CoHere&apos;s NLP** and **Beautiful Soup** to scrape and extract keywords from 5000+ reviews in seconds',
       'Stored and cached results in a **RESTful Django** backend'
     ]
   },

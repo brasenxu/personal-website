@@ -27,7 +27,7 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-2xl md:text-4xl text-orange-50 mb-8"
         >
-          UWaterloo Computer Science '27
+          UWaterloo Computer Science &apos;27
         </motion.h2>
 
         {/* Social Media Links */}
