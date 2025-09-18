@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Brasen Xu - Software Engineer",
-  description: "Brasen Xu is a software engineer and computer science student at University of Waterloo. This is his personal website showcasing his projects and work experience.",
+  title: "Brasen Xu - Oh Hi!",
+  description: "Brasen Xu is a software engineer and computer science student at University of Waterloo. This is his website.",
 };
 
 export default function RootLayout({
