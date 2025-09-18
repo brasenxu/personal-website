@@ -22,7 +22,8 @@ const config: Config = {
         'gradient': 'gradient 10s ease infinite',
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-in': 'slideIn 0.5s ease-out',
-        'scale-in': 'scaleIn 0.3s ease-out'
+        'scale-in': 'scaleIn 0.3s ease-out',
+        'meteor-effect': 'meteor-effect 1s linear infinite'
       },
       keyframes: {
         gradient: {
@@ -41,6 +42,19 @@ const config: Config = {
         scaleIn: {
           '0%': { transform: 'scale(0.95)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' }
+        },
+        'meteor-effect': {
+          '0%': { 
+            transform: 'rotate(215deg) translateX(0)',
+            opacity: '1'
+          },
+          '70%': {
+            opacity: '1'
+          },
+          '100%': { 
+            transform: 'rotate(215deg) translateX(500px)',
+            opacity: '0'
+          }
         }
       },
       backgroundImage: {
