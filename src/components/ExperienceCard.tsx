@@ -84,18 +84,16 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
           className={`w-1/3 h-1 rounded-full ${colors.bar} mb-6 group-hover:w-3/4 transition-all duration-300`}
         />
 
-        <ul className="space-y-3 list-disc list-inside">
-          {experience.achievements.map((achievement, achievementIndex) => (
-            <motion.li 
-              key={achievementIndex}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 + achievementIndex * 0.1 }}
-              className="text-gray-200 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: formatMarkdownText(achievement, colors.strong) }}
-            />
-          ))}
-        </ul>
+        <div className="flex justify-center items-center">
+          <motion.img
+            src={experience.logo}
+            alt={`${experience.company} logo`}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="max-w-xs max-h-32 object-contain"
+          />
+        </div>
       </div>
     </motion.div>
   )
