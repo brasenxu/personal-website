@@ -17,25 +17,29 @@ const colorVariants = {
     gradient: 'before:bg-gradient-to-r before:from-yellow-500/10 before:to-transparent',
     bar: 'bg-yellow-500',
     accent: 'text-yellow-500',
-    hover: 'hover:text-yellow-400'
+    hover: 'hover:text-yellow-400',
+    strong: 'text-yellow-400'
   },
   green: {
     gradient: 'before:bg-gradient-to-r before:from-green-500/10 before:to-transparent',
     bar: 'bg-green-500',
     accent: 'text-green-500', 
-    hover: 'hover:text-green-400'
+    hover: 'hover:text-green-400',
+    strong: 'text-green-400'
   },
   blue: {
     gradient: 'before:bg-gradient-to-r before:from-blue-500/10 before:to-transparent',
     bar: 'bg-blue-500',
     accent: 'text-blue-500',
-    hover: 'hover:text-blue-400'
+    hover: 'hover:text-blue-400',
+    strong: 'text-blue-400'
   },
   red: {
     gradient: 'before:bg-gradient-to-r before:from-red-500/10 before:to-transparent',
     bar: 'bg-red-500',
     accent: 'text-red-500',
-    hover: 'hover:text-red-400'
+    hover: 'hover:text-red-400',
+    strong: 'text-red-400'
   }
 }
 
@@ -59,21 +63,21 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       className={`relative overflow-hidden rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 mb-8 group hover:border-gray-600 transition-all duration-300 ${colors.gradient} before:absolute before:inset-0 before:opacity-100 before:rounded-xl`}
     >
       <div className="relative z-10 p-6 md:p-8">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
           <div className="flex-1">
-            <h2 className={`text-2xl md:text-3xl font-bold text-white mb-4 ${colors.hover} transition-colors`}>
+            <h2 className={`text-2xl md:text-3xl font-bold text-white mb-3 ${colors.hover} transition-colors`}>
               {project.title}
             </h2>
             
             {project.badges.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2">
                 {project.badges.map((badge, badgeIndex) => (
                   <a
                     key={badgeIndex}
                     href={badge.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-yellow-600 text-yellow-100 px-3 py-1 rounded-full text-sm font-medium hover:bg-yellow-500 transition-colors"
+                    className="bg-yellow-600 text-yellow-100 px-2.5 py-0.5 rounded-full text-xs font-medium hover:bg-yellow-500 transition-colors"
                   >
                     {badge.text}
                   </a>
@@ -82,13 +86,13 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             )}
           </div>
           
-          <div className="flex gap-4 text-3xl text-orange-100">
+          <div className="flex gap-5 text-4xl text-orange-100 md:self-center">
             {project.links.github && (
               <a
                 href={project.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors"
+                className={`${colors.hover} transition-colors`}
               >
                 <i className="si si-github"></i>
               </a>
@@ -98,7 +102,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 href={project.links.devpost}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors"
+                className={`${colors.hover} transition-colors`}
               >
                 <i className="si si-devpost"></i>
               </a>
@@ -108,7 +112,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 href={project.links.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors"
+                className={`${colors.hover} transition-colors`}
               >
                 <i className="si si-youtube"></i>
               </a>
@@ -118,7 +122,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 href={project.links.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors"
+                className={`${colors.hover} transition-colors`}
               >
                 <i className="si si-link"></i>
               </a>
@@ -182,7 +186,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           className={`w-1/3 h-1 rounded-full ${colors.bar} mb-6 group-hover:w-3/4 transition-all duration-300`}
         />
 
-        <ul className="space-y-4">
+        <ul className="space-y-3 list-disc list-inside">
           {project.description.map((desc, descIndex) => (
             <motion.li 
               key={descIndex}
@@ -190,7 +194,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 + descIndex * 0.1 }}
               className="text-gray-200 leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: formatMarkdownText(desc) }}
+              dangerouslySetInnerHTML={{ __html: formatMarkdownText(desc, colors.strong) }}
             />
           ))}
         </ul>

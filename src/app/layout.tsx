@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Meteors } from "@/components/ui/meteors";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,16 +33,14 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black overflow-x-hidden`}
         suppressHydrationWarning={true}
       >
-        <div className="relative min-h-screen">
-          <div className="absolute inset-0 overflow-hidden">
-            <Meteors number={20} />
-          </div>
-          <div className="relative z-10">
-            <Navbar />
-            <main className="container mx-auto">
-              {children}
-            </main>
-          </div>
+        <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+          <BackgroundBeams />
+        </div>
+        <div className="relative z-10 min-h-screen">
+          <Navbar />
+          <main className="container mx-auto">
+            {children}
+          </main>
         </div>
       </body>
     </html>
