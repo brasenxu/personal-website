@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,12 +30,18 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css" type="text/css" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black overflow-x-hidden`}
+        suppressHydrationWarning={true}
       >
-        <Navbar />
-        <main className="container mx-auto">
-          {children}
-        </main>
+        <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+          <BackgroundBeams />
+        </div>
+        <div className="relative z-10 min-h-screen">
+          <Navbar />
+          <main className="container mx-auto">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );

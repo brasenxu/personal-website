@@ -59,6 +59,24 @@ export const projects: Project[] = [
     ]
   },
   {
+    id: 'uncoil',
+    title: 'Uncoil',
+    color: 'yellow',
+    badges: [],
+    links: {
+      github: 'https://github.com/kellyw1806/uncoil',
+      devpost: 'https://devpost.com/software/uncoil',
+      youtube: 'https://youtu.be/V89KY6ixToM?si=sHpxZ31t6p9unjuA'
+    },
+    images: [],
+    description: [
+      'Built a personalized physical therapy platform using **React**, **TypeScript**, and **FastAPI** that provides real-time posture correction and hands-free feedback through text-to-speech technology',
+      'Trained a custom **deep neural network** in **TensorFlow** from scratch in 24 hours to generate individualized exercise routines based on user data including weight, height, age, and fitness goals',
+      'Integrated **YOLO v11** object detection model in **PyTorch** for real-time pose estimation and movement analysis, ensuring proper form during exercises with immediate actionable feedback',
+      'Leveraged **Cohere API** to generate clear, concise exercise descriptions and instructions for nearly 20 different exercises, creating a dynamic and engaging therapy experience'
+    ]
+  },
+  {
     id: 'quizcaster',
     title: 'QuizCaster',
     color: 'blue',
