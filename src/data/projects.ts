@@ -134,6 +134,20 @@ export const projects: Project[] = [
     ]
   },
   {
+    id: 'chess',
+    title: 'Chess',
+    color: 'green',
+    badges: [],
+    links: {
+      github: 'https://github.com/sammyyyyy1/chess-cs246'
+    },
+    images: [],
+    description: [
+      'Made chess in **C++** for an Object Oriented Programming course',
+      'Leveraged techniques like safe pointers and exception handling',
+    ]
+  },
+  {
     id: 'quiztopia',
     title: 'Quiztopia',
     color: 'red',
@@ -147,6 +161,18 @@ export const projects: Project[] = [
       'Developed a trivia app featuring a question bank of nearly **4000 problems**, allowing users to log into an account to save their elo progress on the global leaderboard',
       'Designed an intuitive and engaging user interface using **React Native**',
       'Built the backend using **AppWrite**'
+    ]
+  },
+  {
+    id: 'wlp4',
+    title: 'WLP4 Compiler',
+    color: 'blue',
+    badges: [],
+    links: {},
+    images: [],
+    description: [
+      'Developed a compiler for a language similar to **C++** as part of a **Compilers** course',
+      'Used CFGs and bottom-up parsing to define syntax and generate MIPS assembly code',
     ]
   }
 ];
