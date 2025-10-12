@@ -9,9 +9,9 @@ export default function Experience() {
     <div className="min-h-screen py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4 }}
           className="mt-4 mb-12"
         >
           <h1 className="text-4xl md:text-6xl font-bold text-orange-100">

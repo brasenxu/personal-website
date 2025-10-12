@@ -50,6 +50,47 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on'
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN'
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin'
+          },
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin'
+          },
+          {
+            key: 'Cross-Origin-Embedder-Policy',
+            value: 'credentialless'
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com; frame-ancestors 'self';"
+          },
+        ],
+      },
     ];
   },
 
@@ -58,11 +99,19 @@ const nextConfig: NextConfig = {
 
   // Optimize production builds
   productionBrowserSourceMaps: false,
+  
+  // Compiler options for better optimization
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 
   // Enable experimental features for performance
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
   },
+  
+  // Enable SWC minification for smaller bundles
+  swcMinify: true,
 };
 
 export default nextConfig;

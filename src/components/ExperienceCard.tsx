@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Experience } from '@/data/experiences'
 
 interface ExperienceCardProps {
@@ -44,9 +45,9 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
   
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3, delay: index * 0.05 }}
       className={`relative overflow-hidden rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 mb-8 group hover:border-gray-600 transition-all duration-300 ${colors.gradient} before:absolute before:inset-0 before:opacity-100 before:rounded-xl`}
     >
       <div className="relative z-10 p-6 md:p-8">
@@ -83,14 +84,14 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
           className={`w-1/3 h-1 rounded-full ${colors.bar} mb-6 group-hover:w-3/4 transition-all duration-300`}
         />
 
-        <div className="flex justify-center items-center">
-          <motion.img
+        <div className="flex justify-center items-center relative h-32">
+          <Image
             src={experience.logo}
             alt={`${experience.company} logo`}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="max-w-xs max-h-32 object-contain"
+            width={384}
+            height={128}
+            className="object-contain"
+            priority={index < 2}
           />
         </div>
       </div>

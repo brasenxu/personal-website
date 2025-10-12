@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/next"
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import AsyncIconFont from "@/components/AsyncIconFont";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,12 +64,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect to external domains for better performance */}
+        <link rel="preconnect" href="https://va.vercel-scripts.com" />
+        <link rel="preconnect" href="https://vitals.vercel-insights.com" />
+        <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
+        <link rel="dns-prefetch" href="https://vitals.vercel-insights.com" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black overflow-x-hidden`}
         suppressHydrationWarning={true}
       >
-        {/* Load icon font asynchronously to prevent render blocking */}
-        <AsyncIconFont />
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
           <BackgroundBeams />
         </div>

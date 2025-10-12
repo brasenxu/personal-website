@@ -4,6 +4,9 @@
   "description": "Brasen Xu's personal website showcasing projects and work experience",
   "author": "Brasen Xu",
   "private": true,
+  "browserslist": [
+    "defaults and fully supports es6-module"
+  ],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",

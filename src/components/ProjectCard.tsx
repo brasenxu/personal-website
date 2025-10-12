@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 import { Project } from '@/data/projects'
 import { formatMarkdownText } from '@/lib/utils'
+import { GitHubIcon, DevpostIcon, YouTubeIcon, LinkIcon } from '@/components/SocialIcons'
 
 interface ProjectCardProps {
   project: Project
@@ -57,9 +58,9 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3, delay: index * 0.05 }}
       className={`relative overflow-hidden rounded-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 mb-8 group hover:border-gray-600 transition-all duration-300 ${colors.gradient} before:absolute before:inset-0 before:opacity-100 before:rounded-xl`}
     >
       <div className="relative z-10 p-6 md:p-8">
@@ -86,7 +87,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             )}
           </div>
           
-          <div className="flex gap-5 text-4xl text-orange-100 md:self-center">
+          <div className="flex gap-5 text-orange-100 md:self-center">
             {project.links.github && (
               <a
                 href={project.links.github}
@@ -94,7 +95,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 rel="noopener noreferrer"
                 className={`${colors.hover} transition-colors`}
               >
-                <i className="si si-github"></i>
+                <GitHubIcon className="w-9 h-9" />
               </a>
             )}
             {project.links.devpost && (
@@ -104,7 +105,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 rel="noopener noreferrer"
                 className={`${colors.hover} transition-colors`}
               >
-                <i className="si si-devpost"></i>
+                <DevpostIcon className="w-9 h-9" />
               </a>
             )}
             {project.links.youtube && (
@@ -114,7 +115,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 rel="noopener noreferrer"
                 className={`${colors.hover} transition-colors`}
               >
-                <i className="si si-youtube"></i>
+                <YouTubeIcon className="w-9 h-9" />
               </a>
             )}
             {project.links.live && (
@@ -124,7 +125,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 rel="noopener noreferrer"
                 className={`${colors.hover} transition-colors`}
               >
-                <i className="si si-link"></i>
+                <LinkIcon className="w-9 h-9" />
               </a>
             )}
           </div>
@@ -188,11 +189,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
         <ul className="space-y-3 list-disc list-inside">
           {project.description.map((desc, descIndex) => (
-            <motion.li 
+            <li 
               key={descIndex}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 + descIndex * 0.1 }}
               className="text-gray-200 leading-relaxed"
               dangerouslySetInnerHTML={{ __html: formatMarkdownText(desc, colors.strong) }}
             />
