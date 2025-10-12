@@ -41,6 +41,7 @@ export default function Home() {
             href="https://www.linkedin.com/in/brasenxu" 
             target="_blank" 
             rel="noopener noreferrer"
+            aria-label="Visit Brasen Xu's LinkedIn profile"
             className="hover:text-blue-400 transition-colors duration-300"
           >
             <i className="si si-linkedin"></i>
@@ -49,6 +50,7 @@ export default function Home() {
             href="https://github.com/brasenxu" 
             target="_blank" 
             rel="noopener noreferrer"
+            aria-label="Visit Brasen Xu's GitHub profile"
             className="hover:text-blue-400 transition-colors duration-300"
           >
             <i className="si si-github"></i>
@@ -57,6 +59,7 @@ export default function Home() {
             href="https://devpost.com/brasenxu" 
             target="_blank" 
             rel="noopener noreferrer"
+            aria-label="Visit Brasen Xu's Devpost profile"
             className="hover:text-blue-400 transition-colors duration-300"
           >
             <i className="si si-devpost"></i>
@@ -65,6 +68,7 @@ export default function Home() {
             href="mailto:b8xu@uwaterloo.ca" 
             target="_blank" 
             rel="noopener noreferrer"
+            aria-label="Send email to b8xu@uwaterloo.ca"
             className="hover:text-blue-400 transition-colors duration-300"
           >
             <i className="si si-maildotru"></i>
@@ -74,6 +78,7 @@ export default function Home() {
             href="/BrasenXuResume.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
+            aria-label="Download Brasen Xu's Resume PDF"
             className="text-xl md:text-2xl inline-flex items-center gap-2 px-4 py-2 border-2 border-orange-100 rounded-lg hover:text-blue-400 hover:border-blue-400 transition-all duration-300"
           >
             <i className="si si-googledocs"></i> Resume

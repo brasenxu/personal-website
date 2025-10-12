@@ -4,20 +4,58 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/next"
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import AsyncIconFont from "@/components/AsyncIconFont";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap", // Add font-display: swap for better performance
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap", // Add font-display: swap for better performance
 });
 
 export const metadata: Metadata = {
-  title: "Brasen Xu - Oh Hi!",
-  description: "Brasen Xu is a software engineer and computer science student at University of Waterloo. This is his website.",
+  title: "Brasen Xu - Software Engineer & CS Student",
+  description: "Brasen Xu is a software engineer and computer science student at University of Waterloo. Explore my projects and work experience in software development.",
+  keywords: ["Brasen Xu", "Software Engineer", "Computer Science", "University of Waterloo", "Developer", "Portfolio"],
+  authors: [{ name: "Brasen Xu", url: "https://www.brasen.dev" }],
+  creator: "Brasen Xu",
+  publisher: "Brasen Xu",
+  metadataBase: new URL("https://www.brasen.dev"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.brasen.dev",
+    title: "Brasen Xu - Software Engineer & CS Student",
+    description: "Brasen Xu is a software engineer and computer science student at University of Waterloo. Explore my projects and work experience in software development.",
+    siteName: "Brasen Xu Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Brasen Xu - Software Engineer & CS Student",
+    description: "Software engineer and computer science student at University of Waterloo",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: "google-site-verification-code",
+  },
 };
 
 export default function RootLayout({
@@ -27,13 +65,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css" type="text/css" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black overflow-x-hidden`}
         suppressHydrationWarning={true}
       >
+        {/* Load icon font asynchronously to prevent render blocking */}
+        <AsyncIconFont />
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
           <BackgroundBeams />
         </div>
