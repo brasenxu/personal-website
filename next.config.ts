@@ -56,15 +56,11 @@ const nextConfig: NextConfig = {
   // Enable React strict mode for better development practices
   reactStrictMode: true,
 
-  // Enable SWC minification for faster builds
-  swcMinify: true,
-
   // Optimize production builds
   productionBrowserSourceMaps: false,
 
   // Enable experimental features for performance
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['framer-motion', 'lucide-react'],
   },
 };

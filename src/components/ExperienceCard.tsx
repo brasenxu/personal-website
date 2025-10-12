@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { Experience } from '@/data/experiences'
-import { formatMarkdownText } from '@/lib/utils'
 
 interface ExperienceCardProps {
   experience: Experience

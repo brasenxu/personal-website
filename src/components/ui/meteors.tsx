@@ -20,7 +20,7 @@ export const Meteors = ({
   useEffect(() => {
     setIsMounted(true);
     const meteorCount = number || 20;
-    const meteorArray = Array.from({ length: meteorCount }, (_, idx) => ({
+    const meteorArray = Array.from({ length: meteorCount }, () => ({
       position: Math.random() * (window.innerWidth + 400) - 200,
       animationDelay: Math.random() * 5,
       animationDuration: Math.floor(Math.random() * (10 - 5) + 5),
