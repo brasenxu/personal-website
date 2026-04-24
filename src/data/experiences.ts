@@ -7,14 +7,30 @@ export interface Experience {
   startDate: string;
   endDate: string;
   logo: string;
-  color: 'yellow' | 'green' | 'blue' | 'red';
+  color: 'yellow' | 'green' | 'blue' | 'red' | 'purple';
   achievements: string[];
 }
 
 export const experiences: Experience[] = [
   {
+    id: 'rundoo',
+    title: 'Software Engineer Intern',
+    company: 'Rundoo',
+    companyUrl: 'https://www.rundoo.com/',
+    location: 'Redwood City, USA',
+    startDate: 'January 2026',
+    endDate: 'April 2026',
+    logo: '/assets/company-logos/RundooLogo.svg',
+    color: 'purple',
+    achievements: [
+      'Built Rundoo&apos;s **first gift card product** across web and mobile point-of-sale apps, including activation, redemption, balance tracking, and **2 default analytics reports**.',
+      'Led a **35-PR refactor** of the payments protocol buffer schema across **Go**, **TypeScript**, and **React Native**, staged behind feature flags for zero-downtime rollout and deleting **1,000+ lines** of legacy code.',
+      'Built country-aware address validation with Canadian autocomplete, timezone geocoding, and regional tax rates to enable Rundoo&apos;s **first international market**.'
+    ]
+  },
+  {
     id: 'splunk',
-    title: 'Backend Software Engineer Intern',
+    title: 'Software Engineer Intern',
     company: 'Splunk',
     companyUrl: 'https://www.splunk.com/',
     location: 'San Francisco, USA',
@@ -23,9 +39,11 @@ export const experiences: Experience[] = [
     logo: '/assets/company-logos/logo-splunk-acc-rgb-w.png',
     color: 'yellow',
     achievements: [
-      'Designed and integrated internal **REST APIs** and UI workflows in the Splunk Security Platform, streamlining operational tasks and reducing incident investigation time by **up to 30x**.',
-      'Enhanced ML model execution service to support parameter overrides, cutting configuration deployment from **4–5 hours to minutes** and unlocking new reprocessing capabilities.',
-      'Awarded **Most Impactful Intern Project** in Security Org for the term&apos;s top operational efficiency gains.'
+      'Developed scalable **Java Spring Boot** REST APIs and UI workflows for on-call incident response workflows, reducing investigation time by **30x** on average.',
+      'Built **Java Spring** microservices for runtime configuration of **AWS** ML pipelines, reducing parameter change deployment time by **99%**.',
+      'Built self-service API endpoints for **AWS Glue** job execution, cutting operational time by **93% (30 mins to 2 mins)** and eliminating manual console workflows.',
+      'Resolved flaky integration tests by fixing race conditions and enhancing **Mockito**/**JUnit** mocks, reducing CI/CD pipeline runtime by **75% (7 hours to 1-2 hours)**.',
+      'Awarded **Most Impactful Intern Project** in Security Org for achieving the term&apos;s top efficiency gains.'
     ]
   },
   {
@@ -39,9 +57,9 @@ export const experiences: Experience[] = [
     logo: '/assets/company-logos/OnsemiLogo.png',
     color: 'green',
     achievements: [
-      'Designed and implemented new features for the user interfaces of **5+** Onsemi semiconductor chips using the **QT framework** and **C++**, enhancing user experience and functionality.',
-      'Migrated key processing core software from **Python 2 to Python 3**, ensuring compatibility with modern frameworks and libraries and improving performance by **approximately 20%**.',
-      'Developed a language compiler using **ANTLR4**, enabling the generation of core microcode configuration files.'
+      'Built a language compiler using **ANTLR4**, reducing compilation time by **30%** and enabling the generation of **50+ core microcode configuration files**.',
+      'Developed configuration UIs for **5+ semiconductor products** using the **QT framework** and **C++**, enabling intuitive parameter tuning and real-time performance monitoring for manufacturing operators.',
+      'Migrated key processing core software from **Python 2 to Python 3**, ensuring compatibility with modern frameworks and libraries and improving performance by **approximately 20%**.'
     ]
   },
   {
@@ -55,9 +73,9 @@ export const experiences: Experience[] = [
     logo: '/assets/company-logos/SiemensLogo.png',
     color: 'blue',
     achievements: [
-      'Developed and maintained a **C# Windows Presentation Foundation** receiving floor display application, facilitating real-time tracking and movement of parts and enhancing operational efficiency. Integrated seamlessly with **SQL** database for data management and retrieval.',
-      'Improved existing certification software by adding more efficient search/filter functions, allowing floor managers to search for and grant certifications for over **180 operators**.',
-      'Built a **Windows Form application** to streamline the assembly process of PCBAs, enhancing operator efficiency and accuracy across **11 product lines**.'
+      'Developed a **C#** display application with **SQL Server** backend for real-time parts tracking, reducing inventory lookup time by **96%** on average.',
+      'Built a **Windows Form application** to streamline PCBA assembly workflows across **11 product lines**, reducing overall assembly errors by **30%**.',
+      'Improved existing certification software by adding more efficient search/filter functions, allowing floor managers to search for and grant certifications for over **180 operators**.'
     ]
   },
   {
@@ -71,8 +89,8 @@ export const experiences: Experience[] = [
     logo: '/assets/company-logos/IBCLogo.png',
     color: 'red',
     achievements: [
-      'Planned and executed **software unit testing** for multiple projects, ensuring adherence to quality standards.',
-      'Created automated test scripts for manual test cases using **Selenium** and **Katalon Studio**, successfully boosting efficiency and reducing overall testing times by **over 95% (20x faster than manual testing)**.'
+      'Created automated test scripts for manual test cases using **Selenium** and **Katalon Studio**, boosting efficiency and reducing overall testing times by **over 95% (20x)**.',
+      'Planned and executed **software unit testing** for multiple projects, ensuring adherence to quality standards.'
     ]
   }
 ];

@@ -34,9 +34,16 @@ const colorVariants = {
   red: {
     gradient: 'before:bg-gradient-to-r before:from-red-500/10 before:to-transparent',
     bar: 'bg-red-500',
-    accent: 'text-red-500', 
+    accent: 'text-red-500',
     hover: 'hover:text-red-400',
     strong: 'text-red-400'
+  },
+  purple: {
+    gradient: 'before:bg-gradient-to-r before:from-purple-500/10 before:to-transparent',
+    bar: 'bg-purple-500',
+    accent: 'text-purple-500',
+    hover: 'hover:text-purple-400',
+    strong: 'text-purple-400'
   }
 }
 
