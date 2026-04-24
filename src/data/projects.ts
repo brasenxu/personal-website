@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   color: 'yellow' | 'green' | 'blue' | 'red';
-  badges: { text: string; url: string }[];
+  badges: { text: string; url?: string; variant?: 'award' | 'course' }[];
   links: {
     github?: string;
     devpost?: string;
@@ -134,10 +134,56 @@ export const projects: Project[] = [
     ]
   },
   {
+    id: 'grubguru',
+    title: 'GrubGuru',
+    color: 'red',
+    badges: [
+      { text: 'CS 346', variant: 'course' }
+    ],
+    links: {},
+    images: [
+      '/assets/projects/grubguru/grubguru0.png',
+      '/assets/projects/grubguru/grubguru2.png',
+      '/assets/projects/grubguru/grubguru1.png'
+    ],
+    description: [
+      'Built a native **Android** app in **Kotlin** with **Jetpack Compose** for a **Mobile Application Development** course, helping groups of students decide where to eat by searching, favouriting, and voting on nearby restaurants',
+      'Architected the app with **MVVM** and **Kotlin Coroutines / StateFlow**, with dedicated ViewModels driving reactive Compose UIs across the Explore, Favourites, and GroupGrub tabs',
+      'Integrated the **Google Places API** and **FusedLocationProviderClient** to surface nearby restaurants filtered by availability (Open / Closed / Closing Soon), dietary restrictions, cuisine, rating, and price',
+      'Implemented **GroupGrub**: users create or join a 6-character group code, shortlist restaurants together, then resolve indecision via a **ranked 1–5 vote** tallied on the server or a **Randomize (re-roll)** fallback',
+      'Used **Supabase** (Auth, Postgrest, Storage, **Realtime**) as the backend so group membership, shortlists, and live votes sync across devices, and wrote **JUnit / MockK** unit and **Espresso** instrumentation tests for core flows'
+    ]
+  },
+  {
+    id: 'pockettrader',
+    title: 'PocketTrader',
+    color: 'yellow',
+    badges: [
+      { text: 'CS 348', variant: 'course' }
+    ],
+    links: {
+      github: 'https://github.com/sammyyyyy1/PocketTrader'
+    },
+    images: [
+      '/assets/projects/pockettrader/trending.png',
+      '/assets/projects/pockettrader/trades.png',
+      '/assets/projects/pockettrader/collection.png'
+    ],
+    description: [
+      'Built a **Pokémon TCG Pocket** collection and trading platform for a **Database Systems** course, seeded with 732 cards fetched from the public **TCGdex** API across the first-expansion Mewtwo, Charizard, and Pikachu packs',
+      'Designed a normalized **MySQL** schema (User, Card, Collection, Wishlist, Trade, TradeOpportunity) with an **ER diagram** and relational model, and implemented `INSERT ... ON DUPLICATE KEY UPDATE` upserts to keep per-user card quantities idempotent',
+      'Tuned performance with targeted indexes (`idx_collection_card_qty_user`, `idx_wishlist_card_user`) and verified gains using `EXPLAIN ANALYZE` with `IGNORE INDEX` as the before-case — flipping the optimizer from full scans to index seeks on the production dataset',
+      'Implemented a **mutual-trade matcher**: a 6-way join across Wishlist and Collection finds pairs of users where A wants what B spares and vice-versa, with a same-rarity constraint to keep trades fair',
+      'Shipped a **Flask** (Python) REST API with every query stored as an auditable `.sql` file, **PBKDF2-SHA256** password hashing via Werkzeug, a **Next.js** + Tailwind frontend for browsing/filtering/trading, and one-command local setup via **Docker Compose**'
+    ]
+  },
+  {
     id: 'chess',
     title: 'Chess',
     color: 'green',
-    badges: [],
+    badges: [
+      { text: 'CS 246', variant: 'course' }
+    ],
     links: {
       github: 'https://github.com/sammyyyyy1/chess-cs246'
     },
@@ -167,7 +213,9 @@ export const projects: Project[] = [
     id: 'wlp4',
     title: 'WLP4 Compiler',
     color: 'blue',
-    badges: [],
+    badges: [
+      { text: 'CS 241', variant: 'course' }
+    ],
     links: {},
     images: [],
     description: [

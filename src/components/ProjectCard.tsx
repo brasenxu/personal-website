@@ -72,17 +72,30 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             
             {project.badges.length > 0 && (
               <div className="flex flex-wrap gap-2">
-                {project.badges.map((badge, badgeIndex) => (
-                  <a
-                    key={badgeIndex}
-                    href={badge.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-yellow-600 text-yellow-100 px-2.5 py-0.5 rounded-full text-xs font-medium hover:bg-yellow-500 transition-colors"
-                  >
-                    {badge.text}
-                  </a>
-                ))}
+                {project.badges.map((badge, badgeIndex) => {
+                  const isCourse = badge.variant === 'course'
+                  const baseClasses = 'px-2.5 py-0.5 rounded-full text-xs font-medium transition-colors'
+                  const variantClasses = isCourse
+                    ? 'bg-indigo-600 text-indigo-100 hover:bg-indigo-500'
+                    : 'bg-yellow-600 text-yellow-100 hover:bg-yellow-500'
+                  const className = `${baseClasses} ${variantClasses}`
+
+                  return badge.url ? (
+                    <a
+                      key={badgeIndex}
+                      href={badge.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={className}
+                    >
+                      {badge.text}
+                    </a>
+                  ) : (
+                    <span key={badgeIndex} className={className}>
+                      {badge.text}
+                    </span>
+                  )
+                })}
               </div>
             )}
           </div>
