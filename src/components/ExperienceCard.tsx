@@ -44,6 +44,13 @@ const colorVariants = {
     accent: 'text-purple-500',
     hover: 'hover:text-purple-400',
     strong: 'text-purple-400'
+  },
+  orange: {
+    gradient: 'before:bg-gradient-to-r before:from-orange-500/10 before:to-transparent',
+    bar: 'bg-orange-500',
+    accent: 'text-orange-500',
+    hover: 'hover:text-orange-400',
+    strong: 'text-orange-400'
   }
 }
 

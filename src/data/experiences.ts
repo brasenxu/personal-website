@@ -7,11 +7,27 @@ export interface Experience {
   startDate: string;
   endDate: string;
   logo: string;
-  color: 'yellow' | 'green' | 'blue' | 'red' | 'purple';
+  color: 'yellow' | 'green' | 'blue' | 'red' | 'purple' | 'orange';
   achievements: string[];
 }
 
 export const experiences: Experience[] = [
+  {
+    id: 'roblox',
+    title: 'Software Engineer Intern',
+    company: 'Roblox',
+    companyUrl: 'https://www.roblox.com/',
+    location: 'San Mateo, USA',
+    startDate: 'May 2026',
+    endDate: 'August 2026',
+    logo: '/assets/company-logos/RobloxLogo.png',
+    color: 'red',
+    achievements: [
+      'Shipped reversible archiving for Developer Products and Game Passes across two **C#** services (**gRPC**, **REST**) and a **React**/**TypeScript** UI, giving creators their **first** way to prune catalogs of **tens of thousands of items**.',
+      'Built bulk archive, server-side filtering, and a reusable multi-select toolbar, letting creators archive **50 products at once** instead of one at a time, since reused by the team for bulk pricing.',
+      'Extended a purchasing-status field read **org-wide** to carry a third archive state instead of adding a new field, shipping to production with no data migration and no downstream code changes.'
+    ]
+  },
   {
     id: 'rundoo',
     title: 'Software Engineer Intern',
@@ -87,7 +103,7 @@ export const experiences: Experience[] = [
     startDate: 'May 2023',
     endDate: 'August 2023',
     logo: '/assets/company-logos/IBCLogo.png',
-    color: 'red',
+    color: 'orange',
     achievements: [
       'Created automated test scripts for manual test cases using **Selenium** and **Katalon Studio**, boosting efficiency and reducing overall testing times by **over 95% (20x)**.',
       'Planned and executed **software unit testing** for multiple projects, ensuring adherence to quality standards.'
