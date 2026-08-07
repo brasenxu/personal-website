@@ -32,7 +32,7 @@ export const experiences: Experience[] = [
     id: 'rundoo',
     title: 'Software Engineer Intern',
     company: 'Rundoo',
-    companyUrl: 'https://www.rundoo.com/',
+    companyUrl: 'https://www.rundoo.ai/',
     location: 'Redwood City, USA',
     startDate: 'January 2026',
     endDate: 'April 2026',
